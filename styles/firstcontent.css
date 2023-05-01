@@ -20,7 +20,7 @@ body {
     font-family: 'Lato', 'Montserrat', Arial, Helvetica, sans-serif;
     color: white;
 
-    animation: background-animation 5s ease-in-out 0s infinite alternate;
+    animation: background-animation 25s ease-in-out 0s infinite alternate;
 }
 
 @keyframes background-animation {
@@ -61,6 +61,9 @@ body {
     display: flex;
     grid-gap: 20px;
     align-items: center;
+
+    transform: rotate(0deg) scale(1);
+    transition: all ease-in-out 0.1s;
 }
 
 .navbar-left a:hover {
@@ -121,6 +124,9 @@ body {
 .social-midia-box {
     width: 35px;
     height: 35px;
+
+    transform: rotate(0deg) translateX(px) scale(1);
+    transition: all ease-in-out 0.2s;
 }
 
 .social-midia-box:hover {
@@ -130,7 +136,7 @@ body {
 
 .social-midia-box:hover .box-effect {
     border: #45aaf2 solid 3px;
-    transform: rotate(-30deg) translateX(-20px) scale(1.1);
+    transform: rotate(-50deg) translateX(-20px) scale(1.1);
     transition: transform ease-in-out 0.2s;
 }
 
@@ -139,7 +145,21 @@ body {
     height: 32px;
 
     border: transparent solid 3px;
+
+    transform: rotate(-0deg) translateX(-0px) scale(1);
+    transition: all ease-in-out 0.2s;
+}
+
+.box-effect-instagram {
+    border-radius: 12px;
+}
+
+.box-effect-github {
     border-radius: 100%;
+}
+
+.box-effect-linkdin {
+    border-radius: 6px;
 }
 
 .instagram {
