@@ -8,25 +8,36 @@ html {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0, 0.75);
+}
+
 body {
+    font-family: 'Lato', 'Montserrat', Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: rgba(20,20,20,255);
+}
+
+.background {
     background-image: url("../src/background.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
     width: 100%;
-    height: 100vh;
-    
-    font-family: 'Lato', 'Montserrat', Arial, Helvetica, sans-serif;
-    color: white;
+    height: 970px;
 
     animation: background-animation 25s ease-in-out 0s infinite alternate;
-}
-
-@keyframes background-animation {
-    0% {background-size: 100% 100%;}
-    50% {background-size: 115% 115%;}
-    100% {background-size: 100% 100%;}
 }
 
 .background-overlay {
@@ -100,8 +111,19 @@ body {
     padding-top: 35px;
 }
 
-.navbar-right p {
+.navbar-right a {
     font-size: 20px;
+    color: white;
+    text-decoration: none;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-right a:hover {
+    color: #45aaf2;
+    transform: scale(1.2) rotate(15deg);
+
+    transition: all 0.2s ease-in-out;
 }
 
 .main-content {
@@ -243,6 +265,49 @@ body {
 
 .info-text2 {
     display: none;
+}
+
+.scroll-down {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    margin-top: -250px;
+}
+
+.scroll-down-text {
+    margin-right: 50px;
+
+    animation: scrolldown 2s ease-in-out 0s infinite alternate;
+}
+
+.scroll-down-text a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    writing-mode: vertical-rl;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.scroll-down-text a:hover {
+    color: #45aaf2;
+    transform: scale(0.9);
+
+    transition: all 0.2s ease-in-out;
+}
+
+@keyframes scrolldown {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(5px);}
+    100% {transform: translateY(0px);}
+}
+
+.scroll-down-text p span {
+    font-size: 35px;
 }
 
 @media (max-width: 1255px) {
@@ -425,17 +490,18 @@ body {
     .info-text2 {
         display: block;
 
-        font-size: 15px;
+        font-size: 25px;
         letter-spacing: 5px;
         margin-left: -50px;
 
         cursor: default;
 
         margin-top: 100px;
+        margin-left: 25px;
     }
 
     .info-text2 p {
-        font-size: 15px;
+        font-size: 18px;
         color: #45aaf2;
     
         margin-top: 25px;
