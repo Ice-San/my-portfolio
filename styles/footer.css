@@ -1,0 +1,48 @@
+.footer {
+    background-color: #45aaf2;
+
+    width: 100%;
+    height: 100px;
+
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+
+    margin-top: 75px;
+}
+
+.footer-text {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+
+    width: 100%;
+    height: 100%;
+}
+
+.footer-text p:first-child {
+    color: rgb(255, 255, 255);
+}
+
+.footer-text p:first-child span {
+    cursor: default;
+}
+
+.footer-text p:last-child {
+    font-size: 20px;
+    cursor: default;
+}
+
+@media (max-width: 496px) {
+    .footer-text p:first-child {
+        font-size: 15px;
+    }
+
+    .footer-text p:last-child {
+        font-size: 12px;
+    }
+}
