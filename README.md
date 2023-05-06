@@ -1,3 +1,3 @@
 # my-portfolio
 
-> **Link:** https://ice-san.github.io/my-portfolio/
+> **Link:** http://dev.ruben-costa.com/
