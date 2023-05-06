@@ -121,8 +121,8 @@
         height: 100%;
     
         display: flex;
-        align-items: unset;
-        justify-content: unset;
+        align-items: center;
+        justify-content: center;
         flex-wrap: wrap;
     }
 
